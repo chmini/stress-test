@@ -40,8 +40,6 @@ app.post('/result', (req, res) => {
 
   results = [...results, newResult];
 
-  console.log(results);
-
   res.send({ result: newResult, message: checkStress(newResult) });
 });
 
