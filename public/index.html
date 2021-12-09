@@ -4,13 +4,238 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stress Self-Test</title>
-    <script type="module" src="app.js"></script>
+    <title>Stress Test</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/result.css">
   </head>
   <body>
-    <!-- 검사 폼 -->
-    <form class="form"></form>
-    <!-- 결과 -->
-    <div></div>
+    <div class="header-box">
+      <header>
+        <div class="header-innerbox">
+          <div class="title-box">
+            <h1>스트레스 테스트</h1>
+          </div>
+        <!-- <div class="icon-box"> -->
+          <div class="icon-box">
+          <i class="far fa-angry fa-3x"></i>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="outer">
+      <main>
+        <div class="question-group">
+          <form class="question-form">
+          <div class="question"><h3>1. 예상치 못했던 일 때문에 당황했던 적이 얼마나 있었습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint1" value="0" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint1" value="1" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint1" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint1" value="3" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint1" value="4" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+
+          <div class="question"><h3>2. 인생에서 중요한 일들을 조절할 수 없다는 느낌을 얼마나 경험하였습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint2" value="0" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint2" value="1" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint2" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint2" value="3" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint2" value="4" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+
+          <div class="question"><h3>3. 신경이 예민해지고 스트레스를 받고 있다는 느낌을 얼마나 경험하였습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+            ><input type="radio" name="checkpoint3" value="0" /><span>전혀 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint3" value="1" /><span>거의 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint3" value="2" /><span>때때로 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint3" value="3" /><span>자주 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint3" value="4" /><span>매우 자주 있었다</span></label
+          >
+          </div>
+
+          <div class="question"><h3>4. 당신의 개인적인 문제들을 다루는데 있어서 얼마나 자주 자신감을 느꼈습니까?</div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint4" value="4" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint4" value="3" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint4" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint4" value="1" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint4" value="0" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+
+          <div class="question"><h3>5. 일상의 일들이 당신의 생각대로 진행되고 있다는 느낌을 얼마나 경험하였습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint5" value="4" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint5" value="3" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint5" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint5" value="1" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint5" value="0" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+
+          <div class="question"><h3>6. 당신이 꼭 해야 하는 일을 처리할 수 없다고 생각한 적이 얼마나 있었습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+            ><input type="radio" name="checkpoint6" value="0" /><span>전혀 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint6" value="1" /><span>거의 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint6" value="2" /><span>때때로 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint6" value="3" /><span>자주 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint6" value="4" /><span>매우 자주 있었다</span></label
+          >
+          </div>
+
+          <div class="question"><h3>7. 일상생활의 짜증을 얼마나 자주 잘 다스릴 수 있었습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+            ><input type="radio" name="checkpoint7" value="4" /><span>전혀 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint7" value="3" /><span>거의 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint7" value="2" /><span>때때로 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint7" value="1" /><span>자주 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint7" value="0" /><span>매우 자주 있었다</span></label
+          >
+          </div>
+
+          <div class="question"><h3>8. 최상의 컨디션이라고 얼마나 자주 느끼셨습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+            ><input type="radio" name="checkpoint8" value="4" /><span>전혀 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint8" value="3" /><span>거의 없었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint8" value="2" /><span>때때로 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint8" value="1" /><span>자주 있었다</span></label
+          >
+          <label class="check-button"
+            ><input type="radio" name="checkpoint8" value="0" /><span>매우 자주 있었다</span></label
+          >
+          </div>
+
+          <div class="question"><h3>9. 당신이 통제할 수 없는 일 때문에 화가 난 경험이 얼마나 있었습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint9" value="0" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint9" value="1" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint9" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint9" value="3" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint9" value="4" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+
+          <div class="question"><h3>10. 어려운 일들이 너무 많이 쌓여서 극복하지 못할 것 같은 느낌을 얼마나 자주 경험하였습니까?</h3></div>
+          <div class="answer">
+            <label class="check-button"
+              ><input type="radio" name="checkpoint10" value="0" /><span>전혀 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint10" value="1" /><span>거의 없었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint10" value="2" /><span>때때로 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint10" value="3" /><span>자주 있었다</span></label
+            >
+            <label class="check-button"
+              ><input type="radio" name="checkpoint10" value="4" /><span>매우 자주 있었다</span></label
+            >
+          </div>
+          <div class="submit-box">
+            <button class="submit-btn">Test</button>
+          </div>
+          </form>
+        </div>
+
+        <div class="result"></div>
+      </main>
+    </div>
+
+    
+
+    <div class="scroll-icon bx bx-up-arrow-circle"></div>
+    <script src="./js/app.js"></script>
+    <script src="./data.js"></script>
   </body>
+
 </html>
