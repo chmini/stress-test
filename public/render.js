@@ -12,8 +12,8 @@ const render = async () => {
         { length: db.stressTestChoice.length },
         (_, index) => `<label class="check-button">
           <input type='radio' name='checkpoint${id + 1}'
-            value='${order === 'asc' ? index : db.stressTestChoice.length - index}'/>
-            <span>${db.stressTestChoice[order === 'asc' ? index : db.stressTestChoice.length - index]}</span>
+            value='${order === 'asc' ? index : db.stressTestChoice.length - (index + 1)}'/>
+            <span>${db.stressTestChoice[index]}</span>
           </label>`
       ).join('')}</div>`
     )
