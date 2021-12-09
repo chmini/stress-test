@@ -1,7 +1,9 @@
+const db = require('./db.js');
+
 const express = require('express');
 
 const app = express();
-const PORT = 3500;
+const PORT = 5500;
 
 let results = [];
 
@@ -27,6 +29,10 @@ const checkStress = newResult => {
 
 app.use(express.static('public'));
 app.use(express.json());
+
+app.get('/db', (req, res) => {
+  res.send(db);
+});
 
 app.post('/result', (req, res) => {
   const data = req.body;
