@@ -37,7 +37,10 @@ $form.onsubmit = async e => {
 
   const formData = [...new FormData($form)];
 
-  if (formData.length < db.stressTestQuestions.length) return;
+  if (formData.length < db.stressTestQuestions.length) {
+    alert('체크되지 않은 문항이 있습니다.');
+    return;
+  }
 
   const data = await fetch('/result', {
     method: 'POST',
