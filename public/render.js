@@ -49,7 +49,11 @@ $form.onsubmit = async e => {
   }).then(data => data.json());
 
   $form.style.display = 'none';
-  // $result.style.display = 'block'
 
-  $result.innerHTML = `<div>점수 : ${data.result}</div><div>${data.message}</div>`;
+  $result.innerHTML = `
+    <div>점수 : ${data.result}</div>
+    <div>${data.message}</div>
+    <div data-stepped-bar='{"title": "Custom Title", "catagories": [ { "name": "Label 1", "value": 50, "color": "#ff6384" }, { "name": "Label 2", "value": 50, "color": "#ffcd56" } ]}'>
+    </div>
+    <div>비슷한 결과를 가진 사람이 ${data.percent} 있습니다.</div>`;
 };
