@@ -2,7 +2,7 @@ body {
   font-family: 'Stylish', sans-serif;
 }
 
-@media screen and (max-width: 830px) {  
+@media screen and (max-width: 830px) {
   .outer {
     width: auto;
     font-size: 12px;
@@ -18,7 +18,7 @@ body {
     animation: glow 4s infinite;
     display: none;
   }
-} 
+}
 
 .header-box {
   /* width: 1000px; */
@@ -85,15 +85,15 @@ body {
 }
 
 .check-button input[type='radio'] + span:hover {
-  border: 1px solid #58B6F1;
-  background: #58CDEE;
+  border: 1px solid #58b6f1;
+  background: #58cdee;
   color: white;
   font-weight: 900;
 }
 
 .check-button input[type='radio']:checked + span {
-  border: 1px solid #58B6F1;
-  background: #58CDEE;
+  border: 1px solid #58b6f1;
+  background: #58cdee;
   color: white;
   font-weight: 900;
 }
@@ -130,10 +130,12 @@ body {
 
 .submit-btn:hover {
   cursor: pointer;
-  background-color: #F0FBFB;
-  border: 1px solid #1CC4D7;
+  background-color: #f0fbfb;
+  border: 1px solid #1cc4d7;
   color: crimson;
   font-weight: 900;
 }
 
-
+.result {
+  font-size: 45px;
+}

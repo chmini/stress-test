@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 const PORT = 5500;
 
-let results = [];
+let results = [18, 20, 14, 12, 11, 15, 23, 19, 18, 17, 17, 19, 12, 11, 20, 15, 15, 16];
 
 const messages = [
   '정상적인 스트레스 상태로 스트레스 요인 자체가 심각하지 않거나 좋은 스트레스로 받아들인 경우이다.',
@@ -40,7 +40,15 @@ app.post('/result', (req, res) => {
 
   results = [...results, newResult];
 
-  res.send({ result: newResult, message: checkStress(newResult) });
+  const sameRange = results.filter(result => checkStress(result) === checkStress(newResult));
+
+  console.log(sameRange, results);
+
+  res.send({
+    percent: `${Math.floor((sameRange.length / results.length) * 100)}%`,
+    result: newResult,
+    message: checkStress(newResult),
+  });
 });
 
 app.listen(PORT, () => {
